@@ -14,9 +14,11 @@
     "@emotion/styled": "^11.14.1",
     "@heroui/react": "^3.2.6",
     "@heroui/styles": "^3.2.6",
-    "@mui/material": "^9.4.0",
+    "@mui/icons-material": "^9.5.0",
+    "@mui/material": "^9.5.0",
     "react": "^19.2.8",
-    "react-dom": "^19.2.8"
+    "react-dom": "^19.2.8",
+    "swiper": "^14.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
