@@ -1,24 +1,31 @@
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-
-interface Header{
-
-}
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export default function Header() {
+    const navigationItems = ["Articles", "About us", "Contact us", "Authors"];
 
-return (
-    <>
+    return (
         <header className="header">
-            <Stack direction="row" spacing={2}>
-                <Button id="headerButton" onClick= {() => console.log("Button Pressed")}> Artigos </Button>
-                <Button id="headerButton" onClick = {() => console.log("Button Pressed")}> Sobre nós </Button>
-                <Button id="headerButton" onClick = {() => console.log("Button Pressed")}> Contacte-nos </Button>
-                <Button id="headerButton" onClick = {() => console.log("Button Pressed")}> Autores </Button>
-            </Stack>
+            <div className="header-content">
+                <a className="header-brand" href="/" aria-label="Caneta Lusófona">
+                    <img src="/logo.png" alt="" />
+                    <span>Caneta Lusófona</span>
+                </a>
+
+                <Stack
+                    className="header-navigation"
+                    component="nav"
+                    direction="row"
+                    spacing={{ xs: 0.5, sm: 1 }}
+                    aria-label="Main navigation"
+                >
+                    {navigationItems.map((item) => (
+                        <Button className="header-button" key={item}>
+                            {item}
+                        </Button>
+                    ))}
+                </Stack>
+            </div>
         </header>
-    </>
-)
-
+    );
 }
-
